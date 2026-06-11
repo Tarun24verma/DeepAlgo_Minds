@@ -27,21 +27,23 @@ while i>0:
     else:
         setbit.append(0)
     i//=2
+l=''.join(map(str, reversed(setbit)))
 print(count)
 print(setbit)
 j=int(input())
 if j>=len(setbit):
     print("unset bit")
 else:
-    if setbit[j]==1:
+    if l[j-1]==1:
         print("set bit")
     else:
         print("unset bit")
 k=int(input())
 if k>=len(setbit):
     setbit.extend([0]*(k-len(setbit)+1))
-setbit[k]=1
+setbit[k-1]=1
 print(setbit)
 l=''.join(map(str, reversed(setbit)))
+print(count)
 print(conv(l))
 
