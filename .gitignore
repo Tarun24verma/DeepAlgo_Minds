@@ -1,0 +1,5 @@
+__pycache__
+.venv
+Stack.txt
+.vscode
+tempCodeRunnerFile.py
