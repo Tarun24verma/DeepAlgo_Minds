@@ -12,10 +12,18 @@ root.left.right=Tree(2)
 root.left.right.left=Tree(10)
 root.left.right.right=Tree(11)
 root.right.left=Tree(1)
-def Tprint(root):
-    if not root:
-        return
-    Tprint(root.left)
-    print(root.data)
-    Tprint(root.right)
-Tprint(root)
+count=0
+def Tcount(root):
+    # if not root:
+    #     return
+    # Tprint(root.right)
+    # print(root.data)
+    # Tprint(root.left)
+    global count
+    if root:
+        Tcount(root.right)
+        Tcount(root.left)
+        count+=1
+        return root
+Tcount(root)
+print(count)
