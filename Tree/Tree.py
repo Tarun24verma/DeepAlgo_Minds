@@ -3,15 +3,14 @@ class Tree:
         self.data=data
         self.right=None
         self.left=None
-root=Tree(4)
-root.left=Tree(5)
-root.right=Tree(6)
-root.left.left=Tree(3)
-root.left.left.left=Tree(7)
-root.left.right=Tree(2)
-root.left.right.left=Tree(10)
-root.left.right.right=Tree(11)
-root.right.left=Tree(1)
+root=Tree(20)
+root.left=Tree(10)
+root.right=Tree(25)
+root.left.left=Tree(9)
+root.left.left.left=Tree(8)
+root.left.right=Tree(15)
+root.right.left=Tree(22)
+root.right.right=Tree(30)
 def Tprint(root):
     if not root:
         return
@@ -19,3 +18,16 @@ def Tprint(root):
     print(root.data)
     Tprint(root.left)
 Tprint(root)
+s=21
+found=0
+def Search(root,s):
+    if root:
+        if root.data==None:
+            print(False)
+        if root.data == s:
+            print(True)
+        elif s < root.data:
+            return Search(root.left,s)
+        else:
+            return Search(root.right,s)
+Search(root,s)
