@@ -1,0 +1,2 @@
+"""in each row and column only one queen can stand.
+    in any row or column we have to chose one position and then for next queen placing we can eliminate options which are of format (n,m+-y), (n+-x,m), (n+-x, m+-x)"""
